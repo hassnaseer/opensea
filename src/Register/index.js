@@ -1,10 +1,10 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const SignupForm = () => {
-    const history = useHistory();
+    let history = useHistory();
     const formik = useFormik({
         initialValues: {
             firstName: '',
@@ -67,6 +67,7 @@ const SignupForm = () => {
                     <div>{formik.errors.password}</div>
                 ) : null}
                 <button type="submit" className="submit-btn">Submit</button>
+                <Link to="/" className="Link">Go back to Login</Link>
             </form>
         </div>
     );
