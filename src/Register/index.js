@@ -1,13 +1,16 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const SignupForm = () => {
+    const history = useHistory();
     const formik = useFormik({
         initialValues: {
             firstName: '',
             lastName: '',
             email: '',
+            password:'',
         },
         validationSchema: Yup.object({
             firstName: Yup.string()
@@ -19,7 +22,9 @@ const SignupForm = () => {
             email: Yup.string().email('Invalid email address').required('Required'),
         }),
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            // alert(JSON.stringify(values, null, 2));
+            history.push("/layout");
+            console.log(values);
         },
     });
     return (
