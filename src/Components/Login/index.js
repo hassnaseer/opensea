@@ -20,7 +20,7 @@ function LoginPage  () {
         onSubmit: values => {
             login();
             // alert(JSON.stringify(values, null, 2));
-            history.push("/layout");
+            history.push("/calandar");
             console.log(values);
         },
 

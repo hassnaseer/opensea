@@ -4,6 +4,7 @@ import LoginPage from './Components/Login/index';
 import Registration from "./Components/Register/index";
 import Layout from "./Components/Page/layout";
 import Calendar from "./Components/Calendar/Calendar";
+import ApiData from "./Components/ApifetchData/Index";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
                 <Route path="/register" exact component={Registration} />
                 <Route path="/layout" exact component={Layout} />
                 <Route path="/calandar" exact component={Calendar} />
+                <Route path="/apidata" exact component={ApiData} />
             </Switch>
         </Router>
     </div>
